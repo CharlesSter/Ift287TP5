@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app id="test-biblio">
+  <display-name>Système de gestion du Centre Sportif WEB</display-name>
+  <context-param>
+    <param-name>exempleParam1</param-name>
+    <param-value>valeurDeExempleParam1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>exempleParam2</param-name>
+    <param-value>valeurDeExempleParam2</param-value>
+  </context-param>
+      <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>fork</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xpoweredBy</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>javaEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+  <listener>
+    <listener-class>centre_Sportif5Servlet.CentreSportifSessionListener</listener-class>
+    <listener-class>centre_Sportif5Servlet.CentreSportifContextListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>Accueil</servlet-name>
+    <servlet-class>centre_Sportif5Servelet.Accueil</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Accueil</servlet-name>
+    <url-pattern>/Accueil</url-pattern>
+  </servlet-mapping>
+</web-app>
