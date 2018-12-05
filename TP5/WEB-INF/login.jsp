@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>IFT287 - Système de gestion de bibliothèque</title>
-		<meta name="author" content="Vincent Ducharme">
-		<meta name="description" content="Page d'accueil du système de gestion de la bilbiothèque.">
+		<title>IFT287 et IFT 215- SystÃ¨me de gestion du centre sportif</title>
+		<meta name="author" content="equipe 15">
+		<meta name="description" content="Page d'accueil du systÃ¨me de gestion de la bilbiothÃ¨que.">
 		
 		<!-- Required meta tags -->
 	    <meta charset="utf-8">
@@ -16,7 +16,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1 class="text-center">Système de gestion de la bibliothèque</h1>
+		<jsp:include page="/WEB-INF/navigation.jsp" />
+			<h1 class="text-center">SystÃ¨me de gestion du centre sportif</h1>
 			<div class="col-md-4 offset-md-4">
 			<form action="Accueil" method="POST">
 			    <div class="form-group">

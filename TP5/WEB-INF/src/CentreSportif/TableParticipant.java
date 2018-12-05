@@ -16,7 +16,7 @@ public class TableParticipant {
     {
         this.cx = cx;
         stmtExiste = cx.getConnection().prepareStatement(
-                "select prenom, nom, motdepasse, matricule from participant where matricule = ?");
+                "select prenom, nom, motdepasse, matricule,acces from participant where matricule = ?");
         stmtInsert = cx.getConnection().prepareStatement(
                 "insert into participant (prenom, nom, motdepasse, matricule) values(?, ?, ?, ?)");
         stmtDelete = cx.getConnection().prepareStatement(
@@ -56,7 +56,7 @@ public class TableParticipant {
             tupleParticipant.setPrenom(rset.getString(1));
             tupleParticipant.setNom(rset.getString(2));
             tupleParticipant.setMotdepasse(rset.getString(3));
-            tupleParticipant.setAcces(rset.getInt(4));
+            tupleParticipant.setAcces(rset.getInt("acces"));
             
             rset.close();
             
